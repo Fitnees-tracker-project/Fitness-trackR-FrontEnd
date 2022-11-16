@@ -1,0 +1,17 @@
+.link{
+    padding-right: 2vw;
+    font-size: x-large;
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover{
+    color: darkblue;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.navbar{
+    text-align: left;
+    border: 1px solid black;
+}

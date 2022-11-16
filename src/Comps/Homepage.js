@@ -4,7 +4,9 @@ import {Outlet} from 'react-router'
 
 const Homepage = () => {
     return(
+
         <div>
+            <Navbar />
             <p>Welcome to FitnessTrackR</p>
             <p>Get fit today!</p>
         </div>
