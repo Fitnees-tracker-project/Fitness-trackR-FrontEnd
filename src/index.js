@@ -1,24 +1,45 @@
- import React, {useState, useEffect} from 'react';
- import ReactDom from 'react-dom'
- import { createRoot } from 'react-dom/client';
- import { createBrowserRouter, RouterProvider} from 'react-router-dom';
- import Homepage from './Comps/Homepage';
- import ErrorPage from './Comps/Errorpage'
+import React, {useState, useEffect} from 'react';
+import ReactDom from 'react-dom'
+import { createRoot } from 'react-dom/client';
+import {ErrorPage, Homepage, Navbar} from './Comps/index'
 import Page from './Comps/index'
+import RegisterForm from './Comps/Register';
+import Routines from './Comps/Routines';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import {Outlet} from 'react-router'
+
+const App = () => {
+    return(
+        <div>
+            <Navbar />
+
+            <Outlet />
+        </div>
+    )
+}
+
 const route = createBrowserRouter([
     {
-        path: '/',
-        element: <Homepage />,
+        path: "/",
+        element: <App />,
         errorElement: <ErrorPage />,
 
-        children:[
+        children: [
             {
                 index: true,
-                element: <Page />
+                element: <Homepage />
+            },
+            {
+                path: '/routines',
+                element: <Routines />
             }
         ]
     }
 ])
 
 
-ReactDom.render(<RouterProvider router={route} />, document.getElementById('app'))
+
+
+const appElem = document.getElementById('app')
+const root = createRoot(appElem)
+root.render(<RouterProvider router={route} />)

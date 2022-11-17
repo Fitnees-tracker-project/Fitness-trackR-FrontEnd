@@ -1,11 +1,13 @@
-import React from 'react';
+import ErrorPage from "./Errorpage";
+import Navbar from "./Navbar";
+import Homepage from "./Homepage";
 
-const Page =() => {
-    return(
-        <div>
-            <h1>Welcom to fitnessTrackR</h1>
-        </div>
-    )
+// export default ErrorPage;
+// export {}
+export {
+    ErrorPage,
+    Navbar,
+    Homepage
 }
 
-export default Page;
+   
