@@ -22,7 +22,6 @@ const Routines = () => {
                 <div className='routineName'>
                     <p>Routine: {indivRoutine.name}</p>
                 </div>
-
                 <div>
                     <p>Goal: {indivRoutine.goal}</p>
                 </div>

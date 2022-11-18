@@ -22,7 +22,7 @@ const MyRoutines = () => {
     }, [])
     return(
         myRoutines ? myRoutines.map((indivRoutine, idx) => {
-            console.log('rout', indivRoutine)
+            // console.log('rout', indivRoutine)
             return(
                 <div className="divRoutine" key={idx}>
                     <div>

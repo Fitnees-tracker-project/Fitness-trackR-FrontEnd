@@ -4,6 +4,7 @@ import { createRoot } from 'react-dom/client';
 import {ErrorPage, Homepage, Navbar, RegisterForm, Routines, Login, NewRoutine, UpdateRoutine, MyRoutines,} from './Comps/index'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import {Outlet} from 'react-router'
+import MyPage from './Comps/MyPage';
 
 const App = () => {
     return(
@@ -50,6 +51,14 @@ const route = createBrowserRouter([
             path: '/routines/:routineid',
             element: <UpdateRoutine />
             },
+            {
+                path: '/newroutine',
+                element: <NewRoutine />
+            },
+            {
+                path: '/me',
+                element: <MyPage />
+            }
         ]
     }
 ])
