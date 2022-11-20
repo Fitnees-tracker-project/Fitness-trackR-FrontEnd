@@ -58,10 +58,10 @@ const MyPage = () => {
 
                     <div>
                         <button className="workoutButton">
-                            <Link className="linkInButton">Update Post</Link>
+                            <Link className="linkInButton" to={`/routines/${indivRoutine.id}`}>Update Post</Link>
                         </button>
-                        <button className="workoutButton">
-                            <Link className="linkInButton">Delete Post</Link>
+                        <button className="workoutButton linkInButton"> 
+                            <Link className="linkInButton" to={`/me/routines/${indivRoutine.id}`}>Delete Post</Link>
                         </button>
                     </div>
                 </div>

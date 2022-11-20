@@ -2,20 +2,12 @@ import React, {useState, useEffect} from 'react';
 import { useOutletContext, Link, useParams } from 'react-router-dom';
 
 const Routines = () => {
-    const [post, setPost] = useState();
-    useEffect(() => {
-        async function showAllRoutines(){
-            const pubRoutines = await fetch('http://fitnesstrac-kr.herokuapp.com/api/routines')
-            const regRout = await pubRoutines.json();
-            // console.log('this si regROut', regRout)
-            setPost(regRout)
-    }
-    showAllRoutines()
-}, [])
+    const {routines, setRoutines} = useOutletContext();
+   
     // console.log('this is reg', post)
 
   return(
-    post ? post.map((indivRoutine, idx) => {
+    routines ? routines.map((indivRoutine, idx) => {
         // console.log('this is post', post)
         return(
             <div className='divRoutine' key={idx}>
