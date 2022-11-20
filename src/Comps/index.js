@@ -8,6 +8,8 @@ import NewRoutine from "./NewRoutine";
 import UpdateRoutine from "./UpdateRoutine";
 import LoggedIn from "./AmILoggedIn";
 import MyRoutines from "./MyRoutines";
+import Activites from "./Activities";
+import NewActivity from "./NewActivity";
 // export default ErrorPage;
 // export {}
 export {
@@ -21,6 +23,8 @@ export {
     UpdateRoutine,
     LoggedIn,
     MyRoutines,
+    Activites,
+    NewActivity,
 }
 
    
