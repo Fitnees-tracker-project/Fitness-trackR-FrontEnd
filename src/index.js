@@ -4,6 +4,7 @@ import { createRoot } from 'react-dom/client';
 import {ErrorPage, Homepage, Navbar, RegisterForm, Routines, Login, NewRoutine, UpdateRoutine, MyRoutines, Activites, NewActivity, UpdateActivity, UpdateRoutineActivity, PublicRoutinesWithActivity, DeleteRoutineActivities} from './Comps/index'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import {Outlet} from 'react-router'
+import MyPage from './Comps/MyPage';
 
 const App = () => {
     const [routines, setRoutines] = useState()

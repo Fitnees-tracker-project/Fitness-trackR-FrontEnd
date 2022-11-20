@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useParams } from "react-router";
+import { useParams, useNavigate } from "react-router";
 
 const UpdateRoutine = () => {
     //WORKS
@@ -7,6 +7,7 @@ const UpdateRoutine = () => {
     const [goal, setGoal] = useState();
     const [isPublic, setIsPublic] = useState();
     const {routineid} = useParams();
+    const navigate = useNavigate()
     async function isTrue(event){
         event.preventDefault();
         setIsPublic(true)
@@ -35,6 +36,14 @@ const UpdateRoutine = () => {
         })
         const realData = await updateFetch.json()
         console.log('this is real data', realData)
+        async function showAllRoutines(){
+            const pubRoutines = await fetch('http://fitnesstrac-kr.herokuapp.com/api/routines')
+            const regRout = await pubRoutines.json();
+            // console.log('this si regROut', regRout)
+            setRoutines(regRout)
+        }
+        showAllRoutines()
+        navigate('/me')
     }
     // updateRout();
     return(
