@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import ReactDom from 'react-dom'
 import { createRoot } from 'react-dom/client';
-import {ErrorPage, Homepage, Navbar, RegisterForm, Routines, Login, NewRoutine, UpdateRoutine, MyRoutines,} from './Comps/index'
+import {ErrorPage, Homepage, Navbar, RegisterForm, Routines, Login, NewRoutine, UpdateRoutine, MyRoutines, Activites, NewActivity} from './Comps/index'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import {Outlet} from 'react-router'
 
@@ -50,6 +50,14 @@ const route = createBrowserRouter([
             path: '/routines/:routineid',
             element: <UpdateRoutine />
             },
+            {
+                path :'/activities',
+                element: <Activites />
+            },
+            {
+                path:'/newActivity',
+                element: <NewActivity />
+            }
         ]
     }
 ])
