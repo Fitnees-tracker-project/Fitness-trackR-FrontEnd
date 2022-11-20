@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import ReactDom from 'react-dom'
 import { createRoot } from 'react-dom/client';
-import {ErrorPage, Homepage, Navbar, RegisterForm, Routines, Login, NewRoutine, UpdateRoutine, MyRoutines, DeletePost, AttachAct} from './Comps/index'
+import {ErrorPage, Homepage, Navbar, RegisterForm, Routines, Login, NewRoutine, UpdateRoutine, MyRoutines, Activites, NewActivity, UpdateActivity, UpdateRoutineActivity, PublicRoutinesWithActivity, DeleteRoutineActivities} from './Comps/index'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import {Outlet} from 'react-router'
 import MyPage from './Comps/MyPage';
@@ -17,11 +17,9 @@ const App = () => {
     }
     showAllRoutines()
 }, [])
-
     return(
         <div>
             <Navbar />
-
             <Outlet context={{routines, setRoutines}} />
         </div>
     )
@@ -63,20 +61,32 @@ const route = createBrowserRouter([
             element: <UpdateRoutine />
             },
             {
-                path: '/newroutine',
-                element: <NewRoutine />
+                path :'/activities',
+                element: <Activites />
             },
             {
-                path: '/me',
-                element: <MyPage />
+                path:'/newActivity',
+                element: <NewActivity />
             },
             {
-                path: '/me/routines/:postId',
-                element: <DeletePost />
+                path:'/updateActivity/:Activityid',
+                element: <UpdateActivity />
             },
             {
-                path: `/routines/:routineid/activities`,
-                element: <AttachAct />
+                path:'/updateRoutineActivity/:Raid',
+                element: <UpdateRoutineActivity/>
+            },
+            {
+                path:'/publicRoutinesWithActivity/:Raid',
+                element: <PublicRoutinesWithActivity/>
+            },
+            {
+                path:'/deleteRoutineActivity/:activityid',
+                element: <DeleteRoutineActivities />
+            },
+            {
+                path: '/routine/activities/:id',
+                element: <PublicRoutinesWithActivity />
             }
         ]
     }

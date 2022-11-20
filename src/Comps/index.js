@@ -8,8 +8,12 @@ import NewRoutine from "./NewRoutine";
 import UpdateRoutine from "./UpdateRoutine";
 import LoggedIn from "./AmILoggedIn";
 import MyRoutines from "./MyRoutines";
-import DeletePost from "./DeletePost";
-import AttachAct from "./AttachAct";
+import Activites from "./Activities";
+import NewActivity from "./NewActivity";
+import UpdateActivity from "./UpdateActivity";
+import UpdateRoutineActivity from "./UpdateRoutine_Activities";
+import PublicRoutinesWithActivity from "./PublicRoutinesWithActivity";
+import DeleteRoutineActivities from "./DeleteRoutineActivities";
 // export default ErrorPage;
 // export {}
 export {
@@ -23,8 +27,12 @@ export {
     UpdateRoutine,
     LoggedIn,
     MyRoutines,
-    DeletePost,
-    AttachAct
+    Activites,
+    NewActivity,
+    UpdateActivity,
+    UpdateRoutineActivity,
+    PublicRoutinesWithActivity,
+    DeleteRoutineActivities
 }
 
    
