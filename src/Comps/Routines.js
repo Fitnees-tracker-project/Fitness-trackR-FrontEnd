@@ -27,7 +27,7 @@ const Routines = () => {
                     <p>Goal: {indivRoutine.goal}</p>
                 </div>
                 <button className='workoutButton'>
-                    <Link className='linkInButton link' to={`/routine/activities/${idx}`}>See accociated activities</Link>
+                    <Link className='linkInButton link' to={`/publicRoutinesWithActivity/${idx}`}>See accociated activities</Link>
                 </button>
 
                 <button className='workoutButton right'>

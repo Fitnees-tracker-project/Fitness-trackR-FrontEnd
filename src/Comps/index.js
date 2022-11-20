@@ -13,6 +13,7 @@ import NewActivity from "./NewActivity";
 import UpdateActivity from "./UpdateActivity";
 import UpdateRoutineActivity from "./UpdateRoutine_Activities";
 import PublicRoutinesWithActivity from "./PublicRoutinesWithActivity";
+import DeleteRoutineActivities from "./DeleteRoutineActivities";
 // export default ErrorPage;
 // export {}
 export {
@@ -30,7 +31,8 @@ export {
     NewActivity,
     UpdateActivity,
     UpdateRoutineActivity,
-    PublicRoutinesWithActivity
+    PublicRoutinesWithActivity,
+    DeleteRoutineActivities
 }
 
    

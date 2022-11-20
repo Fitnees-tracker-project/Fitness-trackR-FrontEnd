@@ -22,7 +22,7 @@ return(
     myActivities ? myActivities.map((indivActivity, idx) => {
         console.log('activity', indivActivity)
         return (
-            <div className="divActivty" key={idx}>
+            <div className="divRoutine" key={idx}>
                 <div>
                     <p>ActivityId:{indivActivity.id}</p>
                 </div>
@@ -39,9 +39,11 @@ return(
                     <button className="activitybutton">
                         <Link className="LinkActivityButton" to={`/updateActivity/${indivActivity.id}`}>Update Activity</Link>
                     </button>
-                    <button className='RoutineButton'>
-                            <Link className='linkInButton link' to={`/PublicRoutinesWithActivity/${idx}`}>See associated routines</Link>
-                        </button>
+                </div>
+                <div>
+                    <button className="newActivitybutton">
+                        <Link className="LinkNewActivityButton" to={`/newActivity/`}>New Activty</Link>
+                    </button>
                 </div>
             </div>
             )

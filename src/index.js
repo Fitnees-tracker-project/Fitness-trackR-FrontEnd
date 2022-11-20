@@ -1,16 +1,25 @@
 import React, {useState, useEffect} from 'react';
 import ReactDom from 'react-dom'
 import { createRoot } from 'react-dom/client';
-import {ErrorPage, Homepage, Navbar, RegisterForm, Routines, Login, NewRoutine, UpdateRoutine, MyRoutines, Activites, NewActivity, UpdateActivity, UpdateRoutineActivity, PublicRoutinesWithActivity} from './Comps/index'
+import {ErrorPage, Homepage, Navbar, RegisterForm, Routines, Login, NewRoutine, UpdateRoutine, MyRoutines, Activites, NewActivity, UpdateActivity, UpdateRoutineActivity, PublicRoutinesWithActivity, DeleteRoutineActivities} from './Comps/index'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import {Outlet} from 'react-router'
 
 const App = () => {
+    const [routines, setRoutines] = useState()
+    useEffect(() => {
+        async function showAllRoutines(){
+            const pubRoutines = await fetch('http://fitnesstrac-kr.herokuapp.com/api/routines')
+            const regRout = await pubRoutines.json();
+            // console.log('this si regROut', regRout)
+            setRoutines(regRout)
+    }
+    showAllRoutines()
+}, [])
     return(
         <div>
             <Navbar />
-
-            <Outlet />
+            <Outlet context={{routines, setRoutines}} />
         </div>
     )
 }
@@ -59,16 +68,24 @@ const route = createBrowserRouter([
                 element: <NewActivity />
             },
             {
-                path:'/updateActivity',
+                path:'/updateActivity/:Activityid',
                 element: <UpdateActivity />
             },
             {
-                path:'/updateRoutineActivity',
+                path:'/updateRoutineActivity/:Raid',
                 element: <UpdateRoutineActivity/>
             },
             {
-                path:'/publicRoutinesWithActivity',
+                path:'/publicRoutinesWithActivity/:Raid',
                 element: <PublicRoutinesWithActivity/>
+            },
+            {
+                path:'/deleteRoutineActivity/:activityid',
+                element: <DeleteRoutineActivities />
+            },
+            {
+                path: '/routine/activities/:id',
+                element: <PublicRoutinesWithActivity />
             }
         ]
     }

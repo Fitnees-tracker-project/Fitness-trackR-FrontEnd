@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'; 
+import { Link } from 'react-router-dom';
+
 
 const PubicRoutinesWithActivity = () => {
     const [PubicRoutinesWithActivity, setPublicRoutinesWithActivity] = useState ();
@@ -18,29 +20,39 @@ const PubicRoutinesWithActivity = () => {
     }, [])
     return(
         PubicRoutinesWithActivity ? PubicRoutinesWithActivity.map((indivActivityRoutine, idx) => {
-            console.log('routineActivity', indivActivityRoutine)
+            console.log('routineActivity', indivActivityRoutine.activities[0].name)
             return (
-                <div className='routineActivity' key={idx}>
+                <div className='divRoutine' key={idx}>
                     <div>
-                        <p>ActivityId:{indivActivityRoutine.id}</p>
+                        <p>ActivityId: {indivActivityRoutine.id}</p>
                     </div>
                     <div>
-                        <p>Name:{indivActivityRoutine.name}</p>
+                        <p>Name: {indivActivityRoutine.activities[0].name}</p>
                     </div>
                     <div>
-                        <p>Description:{indivActivityRoutine.description}</p>
+                        <p>Description: {indivActivityRoutine.activities[0].description}</p>
                     </div>
                     <div>
-                        <p>Duration:{indivActivityRoutine.duration}</p>
+                        <p>Duration: {indivActivityRoutine.activities[0].duration}</p>
                     </div>
                     <div>
-                        <p>Count:{indivActivityRoutine.count}</p>
+                        <p>Count: {indivActivityRoutine.activities[0].count}</p>
                     </div>
                     <div>
-                        <p>Routine ActivityId:{indivActivityRoutine.routineActivityId}</p>
+                        <p>Routine ActivityId: {indivActivityRoutine.activities[0].routineActivityId}</p>
                     </div>
                     <div>
-                        <p>RoutineId:{indivActivityRoutine.routineId}</p>
+                        <p>RoutineId: {indivActivityRoutine.activities[0].routineId}</p>
+                    </div>
+                    <div>
+                        <button>
+                            <Link className="LinkRaidButton" to={`/updateRoutineActivity/${idx}`}>Update</Link>
+                        </button>
+                    </div>
+                    <div>
+                        <button>
+                            <Link className="DeleteButton" to={`/deleteRoutineActivity/${idx}`}>DELETE</Link>
+                        </button>
                     </div>
                 </div>
             )

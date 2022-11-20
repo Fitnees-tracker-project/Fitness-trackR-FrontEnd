@@ -9,7 +9,7 @@ const UpdateRoutineActivity = () => {
     const {activityId} = useParams();
 
 async function UpdateRoutineActivities(event){ 
-    event.prevent.Default(); 
+    event.preventDefault(); 
 
     const updateFetch = await fetch(`http://fitnesstrac-kr.herokuapp.com/api/api/routine_activities/${activityid}`, {
         method: "PATCH", 
@@ -58,6 +58,7 @@ return(
                 console.log(event.target.value)
                 setDuration (event.target.value)
             }}></input>
+            <input type='submit'></input>
 
         </form>
     </div>
