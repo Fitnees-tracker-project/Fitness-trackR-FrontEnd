@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import ReactDom from 'react-dom'
 import { createRoot } from 'react-dom/client';
-import {ErrorPage, Homepage, Navbar, RegisterForm, Routines, Login, NewRoutine, UpdateRoutine, MyRoutines, Activites, NewActivity} from './Comps/index'
+import {ErrorPage, Homepage, Navbar, RegisterForm, Routines, Login, NewRoutine, UpdateRoutine, MyRoutines, Activites, NewActivity, UpdateActivity, UpdateRoutineActivity, PublicRoutinesWithActivity} from './Comps/index'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import {Outlet} from 'react-router'
 
@@ -57,6 +57,18 @@ const route = createBrowserRouter([
             {
                 path:'/newActivity',
                 element: <NewActivity />
+            },
+            {
+                path:'/updateActivity',
+                element: <UpdateActivity />
+            },
+            {
+                path:'/updateRoutineActivity',
+                element: <UpdateRoutineActivity/>
+            },
+            {
+                path:'/publicRoutinesWithActivity',
+                element: <PublicRoutinesWithActivity/>
             }
         ]
     }
