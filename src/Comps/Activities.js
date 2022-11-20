@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-//import { link } from "react- router-dom"; 
+import { Link } from "react-router-dom"; 
 
 const myActivities = () => {
     const [myActivities, setMyActivities] = useState () 
 
 useEffect (() => {
     async function getActivities(){
-        const activityFetch = await fetch(`http://fitnesstrac-kr.herokuapp.com/api/activities`, {
+        const activityFetch = await fetch(`http://fitnesstrac-kr.herokuapp.com/api/activities/`, {
             header: {
                 'Content-Type' : 'application/json'
             }
@@ -33,6 +33,15 @@ return(
 
                 <div className="ActivityDescription">
                     <p>Description: {indivActivity.description}</p>
+                </div>
+
+                <div>
+                    <button className="activitybutton">
+                        <Link className="LinkActivityButton" to={`/updateActivity/${indivActivity.id}`}>Update Activity</Link>
+                    </button>
+                    <button className='RoutineButton'>
+                            <Link className='linkInButton link' to={`/PublicRoutinesWithActivity/${idx}`}>See associated routines</Link>
+                        </button>
                 </div>
             </div>
             )
