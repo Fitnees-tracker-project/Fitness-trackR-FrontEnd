@@ -22,7 +22,7 @@ const MyRoutines = () => {
     }, [])
     return(
         myRoutines ? myRoutines.map((indivRoutine, idx) => {
-            console.log('rout', indivRoutine)
+            // console.log('rout', indivRoutine)
             return(
                 <div className="divRoutine" key={idx}>
                     <div>
@@ -43,7 +43,7 @@ const MyRoutines = () => {
 
                      <div>
                         <button className="workoutButton">
-                            <Link className="linkInButton" to={`/routines/${indivRoutine.id}`}>Update Post</Link>
+                            <Link className="linkInButton" to={`/routines/${indivRoutine.id}/activities`}>Add activities</Link>
                         </button>
                         <button className='workoutButton'>
                             <Link className='linkInButton link' to={`/routine/activities/${idx}`}>See associated activities</Link>
