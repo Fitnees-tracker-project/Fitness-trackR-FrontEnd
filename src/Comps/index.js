@@ -10,6 +10,9 @@ import LoggedIn from "./AmILoggedIn";
 import MyRoutines from "./MyRoutines";
 import Activites from "./Activities";
 import NewActivity from "./NewActivity";
+import UpdateActivity from "./UpdateActivity";
+import UpdateRoutineActivity from "./UpdateRoutine_Activities";
+import PublicRoutinesWithActivity from "./PublicRoutinesWithActivity";
 // export default ErrorPage;
 // export {}
 export {
@@ -25,6 +28,9 @@ export {
     MyRoutines,
     Activites,
     NewActivity,
+    UpdateActivity,
+    UpdateRoutineActivity,
+    PublicRoutinesWithActivity
 }
 
    
