@@ -58,7 +58,7 @@ return(
                 console.log(event.target.value)
                 setDuration (event.target.value)
             }}></input>
-            <input type='submit'></input>
+            <input className="linkInButton link" type='submit'></input>
 
         </form>
     </div>

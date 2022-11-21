@@ -47,7 +47,7 @@ const NewRoutine = () => {
 }
 }
     return(
-        <div>
+        <div className="divRoutine">
             <h3>Create a new Routine!</h3>
             <form onSubmit={createRoutine}>
                 <label>name:</label>
@@ -63,9 +63,12 @@ const NewRoutine = () => {
                 }}></input>
                 <br></br>
                 <label>Is This Public?</label>
-                <button onClick={isTrue}>true</button><button onClick={isFalse}>false</button>
                 <br></br>
-            <input type='submit'></input>
+                <button  className="linkInButtonLink link"onClick={isTrue}>true</button>
+                <br></br>
+                <button className="linkInButtonLink link" onClick={isFalse}>false</button>
+                <br></br>
+            <input className="linkInButtonLink link" type='submit'></input>
 
             </form>
         </div>

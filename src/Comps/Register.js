@@ -27,7 +27,7 @@ const RegisterForm = () => {
             console.error(error.detail)
         }}
     return(
-        <div>
+        <div className='divRoutine'>
             <h3>Welcome to the website</h3>
             <div>
                 <form onSubmit={formSubmit}>
@@ -43,7 +43,7 @@ const RegisterForm = () => {
                         setPassword(event.target.value)
                     }}></input>
                     <br></br>
-                    <input type='submit'></input>
+                    <input  className= "linkInButton link" type='submit'></input>
                 </form>
             </div>
         </div>

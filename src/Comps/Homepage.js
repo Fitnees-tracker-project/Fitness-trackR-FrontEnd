@@ -5,7 +5,7 @@ import {Outlet} from 'react-router'
 const Homepage = () => {
     return(
 
-        <div>
+        <div className='homepage'>
             <p>Welcome to FitnessTrackR</p>
             <p>Get fit today!</p>
         </div>

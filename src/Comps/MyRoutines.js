@@ -42,9 +42,6 @@ const MyRoutines = () => {
                      </div>
 
                      <div>
-                        <button className="workoutButton">
-                            <Link className="linkInButton" to={`/routines/${indivRoutine.id}/activities`}>Add activities</Link>
-                        </button>
                         <button className='workoutButton'>
                             <Link className='linkInButton link' to={`/routine/activities/${idx}`}>See associated activities</Link>
                         </button>
