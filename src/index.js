@@ -5,6 +5,7 @@ import {ErrorPage, Homepage, Navbar, RegisterForm, Routines, Login, NewRoutine, 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import {Outlet} from 'react-router'
 import MyPage from './Comps/MyPage';
+import DeletePost from './Comps/DeletePost';
 
 const App = () => {
     const [routines, setRoutines] = useState()
@@ -53,7 +54,7 @@ const route = createBrowserRouter([
                 element: <Login />
             },
             {
-                path: '/routine/newroutine',
+                path: '/newroutine',
                 element: <NewRoutine />
             },
             {
@@ -87,6 +88,14 @@ const route = createBrowserRouter([
             {
                 path: '/routine/activities/:id',
                 element: <PublicRoutinesWithActivity />
+            },
+            {
+                path:'/me',
+                element: <MyPage />
+            },
+            {
+                path:'/me/routines/:postId',
+                element: <DeletePost />
             }
         ]
     }

@@ -23,7 +23,7 @@ async function updateActivities(event){
     console.log('please send data', trueDate)
     }
     return(
-        <div>
+        <div className="divRoutine">
             <h3>Update Activity</h3>
             <p>Yes, anyone can update it!</p>
             <form onSubmit={updateActivities}>
@@ -38,7 +38,8 @@ async function updateActivities(event){
                     console.log(event.target.value)
                     setDescription(event.target.value)
                 }}></input>
-            <input type='Submit'></input>
+                <br></br>
+            <input className="LinkInButton link"type='Submit'></input>
             </form>
         </div>
     )

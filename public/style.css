@@ -1,19 +1,25 @@
+html{
+    background-color: bisque;
+    font-family: 'IBM Plex Mono', monospace;
+}
 .link{
     padding-right: 2vw;
     font-size: x-large;
     text-decoration: none;
-    color: black;
+    color: red;
+    font-weight:lighter;
 }
 
 .link:hover{
-    color: darkblue;
+    color: brown;
     text-decoration: underline;
     font-weight: bold;
 }
 
 .navbar{
-    text-align: left;
-    border: 1px solid black;
+    font-size: 40px;
+    border: 2px solid black;
+    text-align: center;
 }
 
 .linkInButton{
@@ -25,6 +31,9 @@
 
 .divRoutine{
     border: 1px solid black;
+    text-align: center;
+    color: brown;
+    font-size: 30px;
 }
 
 .main{
@@ -36,4 +45,10 @@
 }
 .routineName{
     font-size: x-large;
+}
+.homepage{
+    text-align: center;
+    font-size: 80px;
+    color: brown;
+    font-weight: bold;
 }

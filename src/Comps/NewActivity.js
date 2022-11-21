@@ -5,23 +5,23 @@ const createNewActivity = () => {
     const [description, setDescription] = useState()
 
 async function createActivity(event) {
-    event.preventDefault
+    event.preventDefault();
     const newActivityFetch = await fetch('http://fitnesstrac-kr.herokuapp.com/api/activities', {
         method: "POST", 
-        header: {
-            'Content-Type': 'applicatiion/json', 
+        headers: {
+            'Content-Type': 'application/json', 
             'Authorization': `Bearer ${localStorage.getItem('token')}`
         }, 
         body: JSON.stringify({
-            name,
-            description
+            name:name,
+            description:description
         })
     })
     const trueData = await newActivityFetch.json(); 
     console.log('please send data', trueData)
 }    
     return( 
-        <div>
+        <div className="divRoutine">
             <h3>Create New Activity!</h3>
             <form onSubmit={createActivity}>
                 <label>Name:</label>
@@ -35,7 +35,8 @@ async function createActivity(event) {
                     console.log(event.target.value)
                     setDescription(event.target.value)
                 }}></input>
-                <input type='submit'></input>
+                <br></br>
+                <input className="linkInButton link" type='submit'></input>
             </form>
         </div>
     )

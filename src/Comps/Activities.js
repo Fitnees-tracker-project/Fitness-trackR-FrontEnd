@@ -24,10 +24,10 @@ return(
         return (
             <div className="divRoutine" key={idx}>
                 <div>
-                    <p>ActivityId:{indivActivity.id}</p>
+                    <p>ActivityId: {indivActivity.id}</p>
                 </div>
 
-                <div className="AcitivtyName">
+                <div className="routineName">
                     <p>Name: {indivActivity.name}</p>
                 </div>
 
@@ -37,12 +37,10 @@ return(
 
                 <div>
                     <button className="activitybutton">
-                        <Link className="LinkActivityButton" to={`/updateActivity/${indivActivity.id}`}>Update Activity</Link>
+                        <Link className="linkInButton link" to={`/updateActivity/${indivActivity.id}`}>Update Activity</Link>
                     </button>
-                </div>
-                <div>
                     <button className="newActivitybutton">
-                        <Link className="LinkNewActivityButton" to={`/newActivity/`}>New Activty</Link>
+                        <Link className="linkInButton link" to={`/newActivity/`}>New Activity</Link>
                     </button>
                 </div>
             </div>

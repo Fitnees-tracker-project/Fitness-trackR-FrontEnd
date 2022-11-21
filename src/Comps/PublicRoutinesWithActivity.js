@@ -45,12 +45,12 @@ const PubicRoutinesWithActivity = () => {
                         <p>RoutineId: {indivActivityRoutine.activities[0].routineId}</p>
                     </div>
                     <div>
-                        <button>
+                        <button className='linkInButton link'>
                             <Link className="LinkRaidButton" to={`/updateRoutineActivity/${idx}`}>Update</Link>
                         </button>
                     </div>
                     <div>
-                        <button>
+                        <button className='linkInButton link'>
                             <Link className="DeleteButton" to={`/deleteRoutineActivity/${idx}`}>DELETE</Link>
                         </button>
                     </div>

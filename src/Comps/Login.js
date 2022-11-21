@@ -24,7 +24,7 @@ const Login = () => {
         console.error(error.deatil)
     }}
     return(
-        <div>
+        <div className='divRoutine'>
             <h3>Login</h3>
             <div>
                 <form onSubmit={formSubmit}>
@@ -40,7 +40,7 @@ const Login = () => {
                     setPassword(event.target.value)
                 }}></input>
                 <br></br>
-                <input type='submit'></input>
+                <input  className="linkInButton link "type='submit'></input>
                 </form>
             </div>
         </div>
